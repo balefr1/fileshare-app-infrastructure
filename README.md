@@ -9,7 +9,7 @@ It features:
 - R53 public hosted zone
 - ACM certificate
 - Application Load Balancer
-- ECS cluster with task definition
+- ECS cluster,task definition with application container, FARGATE service, task autoscaling
 - CodeDeploy Application&DeploymentGroup for blue/green releases with ECS
 - EFS volume and mountpoints
 - ECR repository 
