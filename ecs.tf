@@ -23,7 +23,7 @@ resource "aws_ecs_task_definition" "ecs_task_app" {
 [
   {
     "cpu": 0,
-    "image": "${var.fileshare-app-image}:2",
+    "image": "${var.fileshare-app-image}:latest",
     "name": "fileshare-app",
     "networkMode": "awsvpc",
     "portMappings": [
