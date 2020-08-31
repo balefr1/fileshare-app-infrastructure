@@ -67,7 +67,7 @@ resource "aws_eip" "natgw_eip" {
 }
 
 #a NAT GW should be created in every public subnet(one for each AZ),
-#each private subnet should use the NAT in the public subnet in the same AZ.
+#each private subnet should have a 0.0.0.0 route to the NAT in the public subnet in the same AZ.
 resource "aws_nat_gateway" "nat_gw" {
     subnet_id = "${aws_subnet.subnet-pub-A.id}"
     allocation_id = "${aws_eip.natgw_eip.id}"
