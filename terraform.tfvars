@@ -1,0 +1,25 @@
+customer_name = "download-2020"
+vpc_cidr_block = "172.16.15.0/24"
+subnet-priv-A = "172.16.15.0/27"
+subnet-priv-B = "172.16.15.32/27"
+subnet-priv-C = "172.16.15.64/27"
+subnet-pub-A = "172.16.15.96/28"
+subnet-pub-B = "172.16.15.112/28"
+subnet-pub-C = "172.16.15.128/28"
+keypair_publickey="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDmSntmfpODvtlpf6X5hd0dAJ6DlfUcnVOL+/yWrLqAWgLgpyWs3wC55nTFjgMWYlaxM1LkKJtNnWIrM55XGC3hhMsLiCLK0eiR0dHM42p1i0bvZaDlKwpaT3IiQEuqQhvVKDMUQBLGjDLwMeUgBuHgdCIXeKduner7/J1BoWD+im4bkrCZZi9EE4Gv3PB72bqGXzWjn6Tsk+OjrF5P0q/6O2k+fnAl0t36WNpE6BJx1zUYXiSlnwpPK93DDVOEkzwRP1jY27meL3EV03P43Cywg5lJ+lko3a59R5WjhvXdf9EqhX+EcZ9ULCoYzbhChjYbeVGsiLr5eXZhp6KCZsEnWOQQnL9Ks5S53b1GZqnGnBjqJ6XJqivIEtpRQc4wLK62TZrbzW5M9tq07dPEhXz6RIegv05qYFFrGczMMSunS7uhETA191jgTtl6XU+BwDGUhDdUHHf0e7N6cBlgDOnkLUxN9pqlbvh3VuEd58P+jtPFBO94SIZBYoQhlWkedV0= sbalestra@sorint.it"
+region = "eu-south-1"
+bastion_host_ami = "ami-0041ee4df3c5af657"
+db_username = "root"
+db_name = "fileshare"
+db_password = "my-secret-pw"
+certificate_arn = ""
+domain_name = "dw2020.ga"
+subject_alternative_names = ["www.dw2020.ga"]
+fileshare-app-image = "618471018050.dkr.ecr.eu-south-1.amazonaws.com/download-2020/fileshare-app"
+alb_public_access = ["93.70.5.250/32"]
+tags = {
+    Owner = "Sereno Balestra"
+    Project = "Download 2020"
+    Terraformed = "true"
+    Email = "sbalestra@sorint.it"
+}
