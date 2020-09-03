@@ -1,7 +1,12 @@
 resource "aws_vpc" "vpc_download_2020" {
     cidr_block = var.vpc_cidr_block
     enable_dns_hostnames = true
-    tags = var.tags
+    tags =  merge(
+    var.tags,
+    {
+      "Name" = "${var.customer_name}-VPC"
+    }
+  )
 }
 
 //private subnets
@@ -9,21 +14,36 @@ resource "aws_subnet" "subnet-priv-A" {
     vpc_id = "${aws_vpc.vpc_download_2020.id}"
     cidr_block = var.subnet-priv-A
     availability_zone = format("%sa",var.region)
-    tags = var.tags
+    tags =  merge(
+    var.tags,
+    {
+      "Name" = "${var.customer_name}-PRIV-A"
+    }
+  )
 }
 
 resource "aws_subnet" "subnet-priv-B" {
     vpc_id = "${aws_vpc.vpc_download_2020.id}"
     cidr_block = var.subnet-priv-B
     availability_zone = "${var.region}b"
-    tags = var.tags
+    tags =  merge(
+    var.tags,
+    {
+      "Name" = "${var.customer_name}-PRIV-B"
+    }
+  )
 }
 
 resource "aws_subnet" "subnet-priv-C" {
     vpc_id = "${aws_vpc.vpc_download_2020.id}"
     cidr_block = var.subnet-priv-C
     availability_zone = "${var.region}c"
-    tags = var.tags
+    tags =  merge(
+    var.tags,
+    {
+      "Name" = "${var.customer_name}-PRIV-C"
+    }
+  )
 }
 
 //public subnets
@@ -31,21 +51,36 @@ resource "aws_subnet" "subnet-pub-A" {
     vpc_id = "${aws_vpc.vpc_download_2020.id}"
     cidr_block = var.subnet-pub-A
     availability_zone = "${var.region}a"
-    tags = var.tags
+    tags =  merge(
+    var.tags,
+    {
+      "Name" = "${var.customer_name}-PUB-A"
+    }
+  )
 }
 
 resource "aws_subnet" "subnet-pub-B" {
     vpc_id = "${aws_vpc.vpc_download_2020.id}"
     cidr_block = var.subnet-pub-B
     availability_zone = "${var.region}b"
-    tags = var.tags
+    tags =  merge(
+    var.tags,
+    {
+      "Name" = "${var.customer_name}-PUB-B"
+    }
+  )
 }
 
 resource "aws_subnet" "subnet-pub-C" {
     vpc_id = "${aws_vpc.vpc_download_2020.id}"
     cidr_block = var.subnet-pub-C
     availability_zone = "${var.region}c"
-    tags = var.tags
+    tags =  merge(
+    var.tags,
+    {
+      "Name" = "${var.customer_name}-PUB-C"
+    }
+  )
 }
 
 //internet gateway for public subnets
