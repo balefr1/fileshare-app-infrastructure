@@ -11,6 +11,8 @@ It features:
 - Application Load Balancer
 - ECS cluster,task definition with application container, FARGATE service, task autoscaling
 - CodeDeploy Application&DeploymentGroup for blue/green releases with ECS
+- CloudWatch Log Group
+- S3 Bucket 
 - EFS volume and mountpoints
 - ECR repository 
 - Bastion Host
