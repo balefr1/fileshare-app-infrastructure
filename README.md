@@ -18,4 +18,4 @@ It features:
 - Bastion Host
 - RDS MySQL database
 
-[Slides here](media/Download_slides.pdf)
+==> [Slides here](media/Download_slides.pdf)
