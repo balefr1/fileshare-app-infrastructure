@@ -1,5 +1,5 @@
 # AWS Infrastructure for application running on ECS
-### This project contains the Terraform files to provision the infrastructure to host this app https://github.com/balefr1/fileshare-app on AWS public cloud
+### This project contains the Terraform files to provision the infrastructure to host this app https://github.com/balefr1/fileshare-app on AWS ECS in public cloud
 
 ![Alt text](media/fileshare-app-infrastructure.jpg?raw=true "Title")
 
