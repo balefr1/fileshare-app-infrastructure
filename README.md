@@ -17,3 +17,5 @@ It features:
 - ECR repository 
 - Bastion Host
 - RDS MySQL database
+
+[Slides here](media/Download_slides.pdf)
