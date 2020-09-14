@@ -1,0 +1,11 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:eu-south-1:012345678900:task-definition/fileshare-app:8"
+        LoadBalancerInfo:
+          ContainerName: "fileshare-app"
+          ContainerPort: 8080
+# SetPlatFormVersion to 1.4.0 in order to support EFS
+        PlatformVersion: "1.4.0"
