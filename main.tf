@@ -5,7 +5,7 @@ terraform {
 
 provider "aws" {
     region = var.region
-    profile = "default"
+    profile = var.profile
 }
 
 //get account id

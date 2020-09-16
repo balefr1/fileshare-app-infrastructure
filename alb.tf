@@ -102,6 +102,25 @@ resource "aws_lb_listener_rule" "health_check" {
 
 }
 
+resource "aws_lb_listener_rule" "redirect_base_domain_to_www" {
+  listener_arn = aws_alb_listener.alb_listener_https.arn
+
+  action {
+    type = "redirect"
+
+    redirect {
+      host = format("www.%s",var.domain_name)
+      status_code = "HTTP_301"
+    }
+  }
+
+  condition {
+    host_header {
+      values = [var.domain_name]
+    }
+  }
+}
+
 # ALB Security group
 resource "aws_security_group" "alb_sg" {
   name        = "${var.customer_name}-alb-sg"

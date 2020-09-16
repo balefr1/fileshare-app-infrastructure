@@ -12,6 +12,7 @@ bastion_host_ami = "ami-0041ee4df3c5af657"
 db_username = "root"
 db_name = "fileshare"
 db_password = "my-secret-pw"
+profile="default"
 certificate_arn = ""
 domain_name = "dw2020.ga"
 subject_alternative_names = ["www.dw2020.ga"]

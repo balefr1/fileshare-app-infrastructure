@@ -4,6 +4,9 @@ variable "vpc_cidr_block" {
 variable "region" {
 	type = string
 }
+variable "profile" {
+	type= string
+}
 variable "subnet-priv-A" {
 	type = string
 }
