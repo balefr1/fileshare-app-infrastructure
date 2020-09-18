@@ -19,3 +19,5 @@ It features:
 - RDS MySQL database
 
 ==> [Slides here](media/Download_slides.pdf)
+
+Maintainer: Sereno Balestra (sbalestra@sorint.it)
