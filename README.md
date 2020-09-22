@@ -18,6 +18,9 @@ It features:
 - Bastion Host
 - RDS MySQL database
 
+Please edit terraform.tfvars to match your needs (domain name, image name, project name...) before running
+terraform-apply. 
+
 ==> [Slides here](media/Download_slides.pdf)
 
 Maintainer: Sereno Balestra (sbalestra@sorint.it)
